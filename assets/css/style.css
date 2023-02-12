@@ -1,0 +1,33 @@
+.intro-picture {
+    max-width:950px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.intro-picture .photos {
+    position: relative;
+    height: 400px;
+}
+
+.intro-picture .photos img{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/*.intro-picture .photos img:first-child{*/
+/*    display: block;*/
+/*}*/
+
+.intro-picture .photos img.header_picture{
+    opacity: 1;
+
+}
+
+
+/*.intro-picture .buttons button{*/
+/*    position: absolute;*/
+/*    justify-content: space-between;*/
+/*}*/

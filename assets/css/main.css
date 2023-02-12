@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css");
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+.wrraper-content{
+    position: relative;
+}
+
+.container{
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.header{
+    /* position: fixed; */
+    background: white;
+    width: 100%;
+    box-shadow: 0px 4px 12px rgba(207, 207, 207, 0.25);
+}
+
+.header_burger{
+    display: none;       
+}
+
+.menu li a {
+    display: flex;
+    position: relative;
+    z-index: 51;
+}
+
+.nav{
+    margin: 0 auto;
+    width: 1110px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.menu li{
+    margin-right: 15px;
+    list-style-type: none;
+
+}
+
+.menu li:last-child{
+    margin-right: 0px;
+}
+
+.menu{
+    display:flex;
+}
+
+.menu li a {
+    color: #70737C; 
+    text-decoration: none;/*Убрать подчеркивание*/
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 178.19%;
+}
+
+.menu li a:hover{
+    color: #23bf35;
+    transition: all 0.5s;
+}
+
+.vl {
+    border: 1px solid #EFEFEF;
+    transform: rotate(180deg);
+    line-height: 178.19%;
+    margin-right: 15px;
+}
+
+
+.like-cart .likeLink{
+    margin-right: 28px;
+}
+
+ .contacts{
+    background: url('/assets/img/instagram-filled.svg') ;
+    width: 24px;
+    height: 24px;
+    margin-right: -18px;
+}
+
+ .contacts:hover{
+    background: url('/assets/img/after-inst.png');
+    width: 24px;
+    height: 24px;
+}
+
+.nav .contactsFace{
+    background: url('/assets/img/facebook-fill.png') ;
+    width: 24px;
+    height: 24px;
+}
+
+.nav .contactsFace:hover{
+    background: url('/assets/img/after-facebook-fill.png');
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Форма пошуку */
+.search-box{
+    padding: 9px 12px 3px 12px;
+    border: 2px solid #EFEFEF;
+    border-radius: 40px;
+    
+}
+
+.search-btn img{
+    border: #eaf1eb;
+    vertical-align: super;
+}
+
+.search-txt{
+    border: none;
+    width: 250px;
+    background: rgba(255, 254, 255, 0.2);
+}
+
+.formForSearch button{
+    border: 0;
+    background: rgba(255, 254, 255, 0.1);
+}
+
+.formForSearch .search-txt{
+    vertical-align: top;
+}/* Форма пошуку */
+
+
+/* Клас для закріпленної шапки */
+.header_fixed{
+    z-index: 663;
+    position: fixed;
+    background: rgba(255, 254, 255, 0.5);
+    top: 0;
+    left: 0;
+    animation-name: show_header;/*задаёт список анимаций, чтобы применить к элементу.*/
+    animation-duration: 1s; /*устанавливает длительность анимации во времени за один цикл.*/
+}
+
+@keyframes show_header { /*CSS-анимации позволяют анимировать переходы от одной конфигурации CSS стилей к другой*/
+    0%{
+        opacity: 1;/*CSS-свойство opacity устанавливает непрозрачность элемента.*/
+        top: -72px;
+    }
+    100%{
+        opacity: 0.5;
+        top: 0;
+    }
+}/* Клас для закріпленної шапки */
+
+
+                                            /* Початок  Контент частина документа   */
+.intro-picture {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.intro-pic img{
+    margin-top: 16px;
+}
+                                            /* Кінець  Контент частина документа   */
+
+
+
+
+#footer{
+    margin-top: 92px;
+}                                                        /* Початок  Footer  */
+
+footer{
+    margin-top: 100%;
+
+
+
+    width: 100%;
+    background: #e7e9ee;
+    margin-bottom: 0;
+}
+
+.v2 {
+    border: 1px solid #EFEFEF;
+    transform: rotate(180deg);
+    line-height: 178.19%;
+    margin-right: 32px;
+}
+
+.nav-footer{
+    height: 101px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #359740;
+}
+ 
+.list-footer{
+    padding-left: 0px;
+    display: flex;
+}
+
+.list-footer li{
+    margin-right: 32px;
+    list-style-type: none;
+}
+
+.list-footer li:last-child{
+    margin-right: 0px;
+}
+
+.list-footer .liPre a{
+    margin-right: 43px;
+}
+
+.list-footer li a {
+    color: #70737C; 
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 178.19%;
+}
+
+.list-footer li img {
+    margin-right: 37px;
+}
+
+
+.wrraper-information{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateOfCompany{
+    margin-top: 12px;
+}
+
+.dateOfCompany li a {
+    color: #70737C; 
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 178.19%;
+}
+
+.dateOfCompany li a img{
+    vertical-align: middle;
+}
+
+.dateOfCompany li{
+    list-style-type: none;
+}
+
+.dateOfCompany li a .amazon{
+    width: 20px;
+    vertical-align: bottom;
+}
+
+.block-info2{
+    align-self: flex-start;
+}
+
+/*Block-Footer 3*/
+.dateOfinfo2{
+    color: #70737C; 
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 178.19%;
+}
+
+.dateOfinfo2 li{
+    list-style-type: none;
+}/*Block-Footer 3*/
+
+
+/*Block-Footer 4*/
+
+.mail{
+    padding: 20px;
+    width: 228px;
+    border: 2px solid #23bf35;
+    border-radius: 40px;
+}
+
+.sing{
+    padding: 11px 33px;
+    color: #359740;
+    background: #EFEFEF;
+    border-radius: 12px;
+    border: 0;
+    cursor: pointer;
+}
+
+/*Block-Footer 4*/
+
+.block4 p{
+    margin-top: 113%;
+}
+
+
+                                    /*Our products.*/
+
+.wrraper-choose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-prod{
+    display: flex;
+}
+
+h2{
+    padding: 0;
+    margin: 0;
+}
+
+.all-prod h2{
+    margin-top: 58px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: -0.05em;
+    color: #1F2533;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*Допрацювати з виводом кількості обраного*/
+.choose-prod{
+    margin-top: 58px;
+}
+
+.choose-prod.menu_list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.choose-prod .menu_list>li>a{
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    text-align: center;
+    color: #359740;
+}
+
+.choose-prod .menu_list>li{
+    position: relative;
+    list-style-type: none;
+    padding: 23px;
+    border: 2px solid #EFEFEF;
+    border-radius: 27px;
+}
+
+.choose-prod .menu_list{
+    display: flex;
+}
+
+.choose-prod .menu_list>li>a{
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    text-align: center;
+    color: #23bf35;
+}
+
+.choose-prod .menu_list li .veg{
+    vertical-align: bottom;
+}
+
+.choose-prod .menu_list{
+    display: flex;
+}
+
+.menu_list>li:hover .sub-menu1{
+    display: block;
+}
+
+.sub-menu1 li .sort{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 178.19%;
+    cursor: pointer;
+    letter-spacing: -0.035em;
+    color: #23bf35;
+    text-decoration: none;
+}
+
+
+
+.menu_listli:hover .sub-menu1{
+    display: block;
+}
+
+.sub-menu1{
+    border: 2px solid #EFEFEF;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+    left: -1px;
+    width: 137px;
+    background: #FFFFFF;
+    border-radius: 9%;
+    padding: 15px;
+}
+
+.sub-menu1 li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    list-style-type: none;
+}
+
+.sub-menu1 li a{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 178.19%;
+    cursor: pointer;
+    letter-spacing: -0.035em;
+    color: #1F2533;
+    text-decoration: none;
+}
+
+.sub-menu1 .v3 {
+    border: 1px solid #EFEFEF;
+    transform: rotate(180deg);
+}
+/*Допрацювати з виводом кількості обраного*/
+
+
+
+.our-prod{
+    margin-top: 40px;
+}
+
+.our-prod .main-menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.our-prod .main-menu>li>a{
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    text-align: center;
+    color: #1F2533;
+}
+
+.our-prod .main-menu>li{
+    position: relative;
+    list-style-type: none;
+    padding: 23px;
+    border: 2px solid #EFEFEF;
+    border-radius: 27px;
+}
+
+.our-prod .main-menu>li:hover{
+    border: 2px solid #359740;
+}
+
+.our-prod .main-menu li img{
+    vertical-align: text-bottom;
+    padding-right: 10px;
+}
+
+.our-prod .main-menu>li>a{
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    text-align: center;
+    color: #1F2533;
+}
+
+.our-prod .main-menu li .veg{
+    vertical-align: bottom;
+}
+
+.our-prod .main-menu{
+    display: flex;
+}
+
+
+
+.main-menu>li:hover .sub-menu{
+    display: block;
+}
+
+.sub-menu{
+    border: 2px solid #EFEFEF;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: -1px;
+    width: 305px;
+    background: #FFFFFF;
+    border-radius: 9%;
+    padding: 29px;
+}
+
+.sub-menu li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    list-style-type: none;
+}
+
+.sub-menu li a{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 178.19%;
+    cursor: pointer;
+    letter-spacing: -0.035em;
+    color: #1F2533;
+    text-decoration: none;
+}
+
+.sub-menu .v3 {
+    border: 1px solid #EFEFEF;
+    transform: rotate(180deg);
+}
+
+
+.dateWhitBD{
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products{
+    position: relative;
+    width: 281px;
+    height: 401px;
+    border: 2px solid #EFEFEF;
+    margin-top: 32px;
+    display: block;
+    padding: 28px;
+    border-radius: 28px;
+    margin-right: 11px;
+}
+
+.products:hover{
+    box-shadow: 10px 10px 15px #23bf35;
+}
+
+.products-title {
+    margin-top: 30px;
+    max-width: 291px;
+ 
+}
+
+.products-title a {
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.04em;
+    color: #1F2533;
+}
+
+.products-but-price{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.price{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 54px;
+    color: #1F2533;
+}
+
+.buy{
+    border: 0;
+    background: #359740;
+    padding: 14px;
+    border-radius: 37px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1F2533;
+    cursor: pointer;
+}
+
+.likePost{
+    position: absolute;
+    left: 84%;
+    
+}
+
+.likePost a img{
+    cursor: pointer;
+}
+
+
+
+.grow-fast{
+    margin: 86px 0 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rew h2{
+    width: 500px;
+    margin-bottom: 21px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -0.05em;
+    color: #1F2533;
+}
+
+.rew p{
+    width: 521px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    color: #1F2533;
+}
+
+.rew .p1{
+    margin-top: 15px;
+}
+
+.clients{
+    margin: 86px 0 0 0;
+    padding: 0;
+    display: flex;
+    align-items: inherit;
+    justify-content: center;
+}
+
+.review h2{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -0.05em;
+    color: #1F2533;   
+}
+
+ .formForReview {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.review .formForReview .buttonForReview{
+    padding: 10px;
+    cursor: pointer;
+    background: #2BB159;
+    border-radius: 8px;
+    border: 0;
+    font-size: 17px;
+    color: #e7e9ee;
+}
+
+.admin-status{
+    border: 2px solid #EFEFEF;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 47%;
+    width: 179px;
+    background: #FFFFFF;
+    border-radius: 9%;
+    padding: 29px;
+}
+
+.menu>.status:hover .admin-status{
+    display: block;
+}
+
+.admin-status .v3 {
+    border: 1px solid #EFEFEF;
+    transform: rotate(180deg);
+}
+
+.admin-status .status-us{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 178.19%;
+    cursor: pointer;
+    letter-spacing: -0.035em;
+    color: #70737C;
+    text-decoration: none;
+}
+
+.like-cart {
+    float:right;
+    font-weight:bold;
+    position:relative;
+}
+.like-cart a {
+    color:#000;
+}
+    .like-cart span {
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 14px;
+        padding: 2px;
+        position: absolute;
+        top: -14px;
+        left: 62px;
+        color: #2bb159;
+        width: 14px;
+        height: 13px;
+        text-align: center;
+    }
+
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.bg-grey {
+    background-color: #eae8e8;
+}
+
+@media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+
