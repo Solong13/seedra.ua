@@ -93,7 +93,7 @@
 
             $sql = "SELECT * FROM catalog 
             JOIN products ON catalog.id_product = products.id
-            JOIN category ON catalog.id_category = category.id";
+            JOIN category ON catalog.id_category = category.id ORDER BY id_product ";
             $result = $db->prepare($sql);
             $result->execute();
 

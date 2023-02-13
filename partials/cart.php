@@ -80,7 +80,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                     </div>
                     <div class="product__controls">
                         <button type="button">
-                            <img src="/assets/img/x.svg" id="delete_id<?= $cartProducts['id_product']; ?>" onclick='deleteProduct(<?=  $cartProducts['id']; ?>)' alt="Видалення з корзини">
+                            <img src="/assets/img/x.svg" id="delete_id<?= $cartProducts['id_product']; ?>" onclick='deleteProduct(<?=  $cartProducts['id_product']; ?>)' alt="Видалення з корзини">
                         </button>
                     </div>
                 </section>

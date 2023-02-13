@@ -4,6 +4,7 @@
     <list default="true" id="7401bdbd-80bb-4bc3-a327-e2b4c3ecbb80" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <workItem from="1675889809277" duration="1623000" />
       <workItem from="1675940712873" duration="13254000" />
       <workItem from="1676223024460" duration="4345000" />
-      <workItem from="1676292046354" duration="616000" />
+      <workItem from="1676292046354" duration="1323000" />
     </task>
     <servers />
   </component>
