@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7401bdbd-80bb-4bc3-a327-e2b4c3ecbb80" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/burger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/DeleteCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/DeleteCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/like.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +20,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KaXIcnAPJLlxYJ7CIdIb8SYQjx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,6 +63,7 @@
       <workItem from="1675889809277" duration="1623000" />
       <workItem from="1675940712873" duration="13254000" />
       <workItem from="1676223024460" duration="4345000" />
+      <workItem from="1676292046354" duration="616000" />
     </task>
     <servers />
   </component>

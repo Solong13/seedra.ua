@@ -42,7 +42,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 
                 foreach ($row as $key => $cartProducts):?>
 
-                <section class="product" id="product<?php echo $cartProducts['id'] ?>">
+                <section class="product" id="product<?php echo $cartProducts['id_product'] ?>">
 
                     <div class="product__img">
                         <img src="/assets/img/<?= $cartProducts['img'] ?>">
@@ -56,9 +56,9 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                         <div class="count">
                            
                         <div class="count__box">
-                                <input type="number"  id="count__input<?= $cartProducts['id'] ?>" class="count__input" min="1"
-                                       name="count_products<?= $cartProducts['id'] ?>" max="50"  step="1" value="1"
-                                       onchange="conversionPrice(<?= $cartProducts['id'] ?>)" >
+                                <input type="number"  id="count__input<?= $cartProducts['id_product'] ?>" class="count__input" min="1"
+                                       name="count_products<?= $cartProducts['id_product'] ?>" max="50"  step="1" value="1"
+                                       onchange="conversionPrice(<?= $cartProducts['id_product'] ?>)" >
                             </div>
                             <div class="count__controls">
                                 <button type="button" id="increment"   class="count__up"  onclick="stepper(this)">
@@ -73,14 +73,14 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 
                     </div>
 
-                    <div class="product__price<?= $cartProducts['id'] ?>">
-                        <span id="itemPrice_<?= $cartProducts['id'] ?>" value="<?= $cartProducts['price'] ?>">
+                    <div class="product__price<?= $cartProducts['id_product'] ?>">
+                        <span id="itemPrice_<?= $cartProducts['id_product'] ?>" value="<?= $cartProducts['price'] ?>">
                             <?= $cartProducts['price'] ?>$
                         </span>
                     </div>
                     <div class="product__controls">
                         <button type="button">
-                            <img src="/assets/img/x.svg" id="delete_id<?= $cartProducts['id']; ?>" onclick='deleteProduct(<?=  $cartProducts['id']; ?>)' alt="Видалення з корзини">
+                            <img src="/assets/img/x.svg" id="delete_id<?= $cartProducts['id_product']; ?>" onclick='deleteProduct(<?=  $cartProducts['id']; ?>)' alt="Видалення з корзини">
                         </button>
                     </div>
                 </section>
@@ -133,7 +133,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 
                 <?php endif;?>
                     <div class="cart-footer__count"><?= $count[0]['COUNT(id_product)'] ?></div>
-                    <div class="cart-footer__price" id="all_price"><?= $order_sum?>$</div>
+                    <div class="cart-footer__price" id="all_price"><?= ROUND($sum[0]['SUM(price)'], 2) ?>$</div>
                 </footer>
         <?php  }else{ ?>
                 <div id="restart">
