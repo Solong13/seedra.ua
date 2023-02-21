@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7401bdbd-80bb-4bc3-a327-e2b4c3ecbb80" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f7f1a57c-bdfd-4011-b81f-9a02172fa29d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f7f1a57c-bdfd-4011-b81f-9a02172fa29d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/adptive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/adptive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +37,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Seedra.ua&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/seedra.ua&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -65,6 +71,9 @@
       <workItem from="1675940712873" duration="13254000" />
       <workItem from="1676223024460" duration="4345000" />
       <workItem from="1676292046354" duration="1323000" />
+      <workItem from="1676804111779" duration="8704000" />
+      <workItem from="1676970414610" duration="21762000" />
+      <workItem from="1677012095582" duration="789000" />
     </task>
     <servers />
   </component>

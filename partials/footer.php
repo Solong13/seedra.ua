@@ -54,6 +54,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/assets/slick/slick.min.js"></script>
     <script src="/assets/js/styleForHeader.js"></script>
     <script src="/assets/js/burger.js"></script>
     <script src="/assets/js/slider.js"></script>

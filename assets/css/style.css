@@ -31,3 +31,142 @@
 /*    position: absolute;*/
 /*    justify-content: space-between;*/
 /*}*/
+
+
+#text_review{
+    border: 2px solid green;
+    border-radius: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #23bf35;
+    font-size: 16px;
+}
+
+.userr{
+    text-decoration: underline;
+    color: #1F2533;
+    font-size: 22px;
+}
+
+.prev_review{
+    text-align: center;
+}
+
+.review{
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+.line_next{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.line_next button div{
+    margin-right: 10px;
+}
+
+.review_slider{
+    background: url('/assets/img/green2.png') ;
+    width: 35px;
+    height: 6px;
+}
+
+.review_slider:hover{
+    background: url('/assets/img/green1.png');
+    width: 35px;
+    height: 6px;
+    transition: 1s;
+}
+
+
+/* sliders reviews */
+.photo{
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cnt_likes{
+    width: 124px;
+    height: 24px;
+}
+
+
+.rev_slider{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 540px;
+    height: 347px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0px 4px 21px rgba(209, 209, 209, 0.25);
+    border-radius: 12px;
+}
+
+.slider_p{
+    padding-left: 50px;
+    padding-top: 45px;
+    padding-right: 50px;
+}
+
+.for_av{
+    display: flex;
+}
+
+
+.for_av .nickname {
+    margin-left: 3%;
+    margin-top: 2%;
+
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+
+    letter-spacing: -0.04em;
+    color: #1F2533;
+    flex: none;
+}
+
+.for_av .post_time{
+    margin-left: -7.5%;
+    margin-top: 9%;
+
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+
+.cnt_likes{
+    margin-top: 7%;
+}
+
+.review_ps{
+    margin-top: 4%;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    color: #1F2533;
+}
+
+.slick-dots li button:before {
+    color: #257a2c;
+}

@@ -22,3 +22,33 @@ btnNext.onclick = function (){
     }
     images[i].className = 'header_picture';
 }
+
+
+//слайдер для постів
+
+ // let posts = document.querySelectorAll('.review_post');
+// console.log(posts);
+//
+// const prev_post = document.querySelector('.prev_post');
+// const next_post = document.querySelector('.next_post');
+//
+// let a = 0;
+//
+// next_post.onclick = function (){
+//     posts[a].className = '';
+//     a = a-- ;
+//     if (a <= 0){
+//         a = posts.length-1;
+//     }
+//     posts[a].className = 'post_visibility';
+// }
+
+
+$(function (){
+    $('.rev_slider').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+})

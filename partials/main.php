@@ -164,14 +164,94 @@
 
             <div class="clients">
                 <div class="review">
-                    <h2>What out clients say</h2>
-                    <form class="formForReview" action="">
-                        <input  class="buttonForReview" type="submit" value="Add Review">
-                    </form>
-                </div>
-            </div>
+                    <h2 class="prev_review">What out clients say</h2>
 
 
-         </div> <!--container -->
+
+                    <div class="rev_slider">
+                            <?php
+                            $sql = "SELECT reviews.*, users.user AS username FROM reviews 
+                            JOIN users ON reviews.id_user = users.id ORDER BY td_add DESC ";
+
+                            $allReviews = $db->prepare($sql);
+                            $allReviews->execute();
+                            $posts = $allReviews->fetchAll(PDO::FETCH_ASSOC); ?>
+                            <?php foreach ($posts as $post): ?>
+
+
+                                <div class="slider_p">
+                                    <div class="for_av">
+                                        <div class="photo" style="background-image: url('/assets/img/avatar.png');"></div>
+                                        <div class="nickname"><?= $post['username']?></div>
+                                        <div class="post_time"><?= $post['td_add']?></div>
+                                    </div>
+
+                                    <div class="cnt_likes" style="background-image: url('/assets/img/rev_like.png');"></div>
+                                    <div class="review_ps"><?= $post['text']?></div>
+                                </div>
+
+
+                            <?php endforeach; ?>
+                    </div>
+
+<!--                            <div class="line_next">-->
+<!--                                <button class="prev_post"><div class="review_slider"></div></button>-->
+<!--                                <button ><div class="review_slider"></div></button>-->
+<!--                                <button class="next_post"><div class="review_slider"></div></button>-->
+<!--                            </div>-->
+
+
+
+                    <?php
+
+                        // Додавання коментарів , якщо користувач авторізувався
+                        if(isset($_SESSION['user_id'])){
+
+                        $nameUser = $_SESSION['user_id'];
+                        $sql = "SELECT user FROM users WHERE id = $nameUser";
+                        $res = $db->prepare($sql);
+                        $res->execute();
+                        $row_user = $res->fetch();
+                        $error = '';
+                        $status = false;
+
+                        // дод коментарів в базу
+                        if ($_SERVER['REQUEST_METHOD'] === "POST"){
+                            $sendRew = trim($_POST['text_for_review']);
+
+                            if (empty($sendRew)){
+                                $error = 'Заповніть полe';
+                            }
+                            else if(mb_strlen($sendRew) < 2) {
+                                $error = 'Коментарій  закороткий';
+                            }else{
+                                $sql = "INSERT INTO reviews (`id_user`, `text`) VALUES (:id_user, :text)";
+                                $addReviews = $db->prepare($sql);
+                                $params = ['id_user' => $_SESSION['user_id'],
+                                           'text' => $_POST['text_for_review']
+                                          ];
+                                $addReviews->execute($params);
+                                $status = true;
+                            }
+
+                    } ?>
+    <form class="formForReview" method="post">
+    <?php if($status): ?>
+        <p>Your commit is done!</p>
+    <?php else: ?>
+    <h3 class="userr">Name: <?= $row_user['user'] ?></h3>
+    <textarea id="text_review" name="text_for_review" type="text" value="<?= isset($sendRew) ?? '' ?>"></textarea><br>
+    <input id="review" class="buttonForReview" type="submit" value="Add Review">
+    <p><?=$error?></p>
+    <?php endif; ?>
+    </form>
+    <?php }else{
+        echo "<p class='comment' style='color: green; text-align: center; margin-top: 10px; margin-left: -50px'>
+            Для того, щоб написати коментарій, зареєструйтесь.
+        </p>";
+    }?>
+        </div>
+    </div>
+  </div> <!--container -->
     </section>
 

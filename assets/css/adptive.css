@@ -209,6 +209,12 @@
 
 /*576px - 768px*/
 @media screen and (max-width: 768px) {
+
+    .rev_slider{
+        width: 350px;!important;
+        height: 200px;
+    }
+
     .nav {
         width: 100%;
     }
@@ -434,4 +440,8 @@
         .rew p{
             display: none;
         }
+
+
 }
+
+

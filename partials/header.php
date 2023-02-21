@@ -38,6 +38,8 @@ $is_cookie = isset($_COOKIE['user_id']) && $_COOKIE['user_id'] != null;
     <link rel="stylesheet" href="/assets/css/cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/sass/cart.scss">
+    <link rel="stylesheet" href="/assets/slick/slick.css">
+    <link rel="stylesheet" href="/assets/slick/slick-theme.css">
 </head>
 <body>
     <header class="header" id="header">
