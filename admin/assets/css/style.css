@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+    /* position: relative; */
+}
+
+.nav {/*родительский элемент*/
+    
+     position: fixed; 
+     z-index: 3;
+    top: 0;
+    background: #fff; 
+    display: flex; /* задаємо для вирівнювання всіх дочірніх елементів*/
+    align-items:center; /* щоб всі елементи дочірні в батькові були по центру*/
+    padding-top: 26px;/* Чому не margin? тому що перший елемент робимо відступ всередину, щоб не двигати контент нижче*/
+    box-shadow:   0px 6px 11px 0px rgba(50, 50, 50, 0.75);
+   
+}
+
+.logo {
+    margin-right: 35px;
+}
+
+.menu {
+    display: flex;   
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.menu li a { 
+    
+    text-decoration: none;/*Убрать подчеркивание*/
+    font-size: 14px;
+    font-family: 'Lexend';
+    
+    line-height: 178.19%;
+    color: #70737C;
+    text-decoration: none;
+}
+
+
+.menu li .for1:hover { 
+    background: #359740;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.menu li {
+    
+    color: #70737C;
+    margin-right: 22px;
+    list-style-type: none;
+}
+
+
+
+/*Випдаючий список*/
+
+.menu li ul {
+    position: absolute;
+    min-width: 80px;
+    display: none;
+}
+
+.menu li ul li {
+    border: 1px solid #70737C;
+}
+
+.menu li ul li  {
+    padding: 5px 5px 5px 13px;
+    text-transform: none;
+    
+}
+
+.menu li:hover ul {
+    display: block;
+}
+/*Випдаючий список*/
+
+/*силка яка доступна лише для входу під адміном*/
+.menu li ul li:hover {
+    background: #359740;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+/**/
+
+.mainPicture {
+    margin-top: 92px;
+    align-items:center;
+}
+
+.photoUnderMain {
+    margin-top: 16px;
+}
+
+.but {
+    position:absolute;
+    top: 29px;
+    left: 994px;
+}
+
+.preLast {
+    margin-left: 20px;
+}
+
+.container h2 {
+    margin-top: 58px;
+    width: 226px;
+    height: 54px;  
+    font-family: 'Lexend';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -0.05em;
+    color: #1F2533; 
+}
+
+.last {
+    margin-left: auto;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+.allGoods, .choiceGoods{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.choiceGoods li {
+    padding: 10px 10px 5px 10px;
+    
+    
+    margin-right: 35px;
+    border: 3px solid ;
+    border-color: #d9dce4;
+    border-radius: 7px;
+}
+
+.choiceGoods li a img {
+    margin-right: 8px;
+    vertical-align: middle;
+}   
+
+.choiceGoods li a{
+    text-decoration: none;
+    color: #1F2533;
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-size: 14px;
+    line-height: 178.19%;
+}
+
+.choiceGoods, .first {
+    margin-left: 20px;
+}   
+
+/*Поля вибору товарів*/
+
+.ourProducts, .products {
+    display: flex;
+    margin-top: 50px;
+    justify-self: center;
+}
+.products li{
+    padding: 15px;
+    margin-right: 57px;
+    max-width: 100%;
+    border: 3px solid ;
+    border-color: #d9dce4;
+    border-radius: 7px;
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.04em;
+    color: #1F2533;
+}
+
+.products li p{
+    font-family: 'Lexend';
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 54px;
+    color: #1F2533;
+}
+
+/*Наші таблиці*/
+
+
+.products li .like  {
+    position: absolute;
+    top: 1063px;
+    left: 393px;
+}
+
+.products li .like2  {
+    position: absolute;
+    top: 1063px;
+    left: 780px;
+}
+
+.products li .like3  {
+    position: absolute;
+    top: 1063px;
+    left: 1170px;
+}
+
+.products li .cardImg  {
+    position: absolute;
+    top: 1464px;
+    left: 393px;
+}
+
+.products li .cardImg2  {
+    position: absolute;
+    top: 1464px;
+    left: 780px;
+}
+
+.products li .cardImg3  {
+    position: absolute;
+    top: 1464px;
+    left: 1170px;
+}
+
+
+/*другий ряд*/
+
+.products li .like4  {
+    position: absolute;
+    top: 1658px;
+    left: 393px;
+}
+
+.products li .cardImg4  {
+    position: absolute;
+    top: 2060px;
+    left: 393px;
+}
+
+.products li .like5  {
+    position: absolute;
+    top:1658px;
+    left: 780px;
+}
+
+.products li .cardImg5  {
+    position: absolute;
+    top: 2060px;
+    left: 780px;
+}
+
+.products li .like6  {
+    position: absolute;
+    top:1658px;
+    left: 1170px;
+}
+
+.products li .cardImg6  {
+    position: absolute;
+    top: 2060px;
+    left: 1170px;
+}
+
+
+
+
+
+/*footer*/
+footer {
+    background-color: #d9dce4;
+}
+
+.contacts .allContacts {
+    padding-bottom: 35px;
+    border-bottom: 0.01px solid #359740;
+    margin-top: 95px;
+    display: flex;
+}
+
+.allContacts li {
+    margin-right: 64px;
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 178.19%;
+    letter-spacing: -0.035em;
+    color: #70737C;
+}
+
+.allContacts  .firstLi {
+
+    margin-right: 64px;
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 178.19%;
+    letter-spacing: -0.035em;
+    color: #359740;
+}
+
+.allContacts{
+    padding-top: 41px;
+}
+
+.allContacts  .lastLi {
+    margin-right: 71px;
+}
+
+.allContacts  .midlle {
+    font-family: 'Lexend';
+    margin-right: 64px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 178.19%;
+    letter-spacing: -0.035em;
+    color: #70737C;
+}
+
+.allContacts li img {
+    margin-right: 65px;
+}
+
+.dataOur {
+    margin-top: 21px;
+    display: flex;
+}
+
+.linkNumber li {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 178.19%;
+    letter-spacing: -0.035em;
+    color: #70737C;
+}
+
+.dataOur .getMail{
+    margin-left: auto;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 178.19%;
+    letter-spacing: -0.035em;
+    color: #70737C;
+   
+}
+
+
+/* Поля для кнпоки зі списком Логін*/
+
+/* .products li .like  {
+    position: absolute;
+    top: 1108px;
+    left: 608px;
+}
+
+
+.products li .like2  {
+    position: absolute;
+    top: 1108px;
+    left: 994px;
+}
+
+.products li .like3  {
+    position: absolute;
+    top: 1108px;
+    left: 1382px;
+}
+
+.products li .cardImg  {
+    position: absolute;
+    top: 1511px;
+    left: 618px;
+}
+
+
+.products li .cardImg2  {
+    position: absolute;
+    top: 1511px;
+    left: 1008px;
+}
+
+.products li .cardImg3  {
+    position: absolute;
+    top: 1511px;
+    left: 1394px;
+}
+
+
+/*другий ряд*/
+
+/*.products li .like4  {
+    position: absolute;
+    top: 1707px;
+    left: 608px;
+}
+
+.products li .cardImg4  {
+    position: absolute;
+    top: 2108px;
+    left: 620px;
+}
+
+.products li .like5  {
+    position: absolute;
+    top: 1707px;
+    left: 992px;
+}
+
+.products li .cardImg5  {
+    position: absolute;
+    top: 2108px;
+    left: 1005px;
+}
+
+.products li .like6  {
+    position: absolute;
+    top: 1707px;
+    left: 1378px;
+}
+
+.products li .cardImg6  {
+    position: absolute;
+       top: 2108px;
+    left: 1392px;
+}*/

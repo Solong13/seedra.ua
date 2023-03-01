@@ -53,4 +53,33 @@ function stepper(btn){
             });
     }
 
+    function writeReview(){
+            const text_review = $('#text_review').val();
+        console.log('falasddse');
+            $.ajax({
+                url: '/controllers/ReviweController.php',
+                type: 'POST',
+                cache: false,
+                data: {'text_review': text_review},
+                dataType: 'json',
+                success: function(data) {
+                    if(data['Done']) {
+                        console.log('true');
+                        $('.buttonForReview').val(data['message']);
+                        $("#error-block").hide();
+                        $(".review_ps").html(data['text']);
+                        $(".userr").html(data['userName']);
+                        $('#text_review').val("");
+                    }
+                    else {
+                        console.log('false');
+                        $("#error-block").show();
+                        $("#error-block").html(data['error']);
+                    }
+                }
+            });
+
+
+    }
+
 

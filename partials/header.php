@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+include_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/ReviweController.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/config/db.php');
 
 $is_session = isset($_SESSION['user_id']) && $_SESSION['user_id'] != null;

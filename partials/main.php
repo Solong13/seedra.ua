@@ -171,7 +171,7 @@
                     <div class="rev_slider">
                             <?php
                             $sql = "SELECT reviews.*, users.user AS username FROM reviews 
-                            JOIN users ON reviews.id_user = users.id ORDER BY td_add DESC ";
+                            JOIN users ON reviews.id_user = users.id ORDER BY td_add DESC LIMIT 5";
 
                             $allReviews = $db->prepare($sql);
                             $allReviews->execute();
@@ -203,53 +203,29 @@
 
 
                     <?php
-
                         // Додавання коментарів , якщо користувач авторізувався
-                        if(isset($_SESSION['user_id'])){
+                        if(isset($_SESSION['user_id'])){?>
 
-                        $nameUser = $_SESSION['user_id'];
+                        <?php $nameUser = $_SESSION['user_id'];
                         $sql = "SELECT user FROM users WHERE id = $nameUser";
                         $res = $db->prepare($sql);
                         $res->execute();
                         $row_user = $res->fetch();
-                        $error = '';
-                        $status = false;
-
-                        // дод коментарів в базу
-                        if ($_SERVER['REQUEST_METHOD'] === "POST"){
-                            $sendRew = trim($_POST['text_for_review']);
-
-                            if (empty($sendRew)){
-                                $error = 'Заповніть полe';
-                            }
-                            else if(mb_strlen($sendRew) < 2) {
-                                $error = 'Коментарій  закороткий';
-                            }else{
-                                $sql = "INSERT INTO reviews (`id_user`, `text`) VALUES (:id_user, :text)";
-                                $addReviews = $db->prepare($sql);
-                                $params = ['id_user' => $_SESSION['user_id'],
-                                           'text' => $_POST['text_for_review']
-                                          ];
-                                $addReviews->execute($params);
-                                $status = true;
-                            }
-
-                    } ?>
+                        // дод коментарів в базу  $row_user['user']
+                    ?>
     <form class="formForReview" method="post">
-    <?php if($status): ?>
-        <p>Your commit is done!</p>
-    <?php else: ?>
-    <h3 class="userr">Name: <?= $row_user['user'] ?></h3>
-    <textarea id="text_review" name="text_for_review" type="text" value="<?= isset($sendRew) ?? '' ?>"></textarea><br>
-    <input id="review" class="buttonForReview" type="submit" value="Add Review">
-    <p><?=$error?></p>
-    <?php endif; ?>
+
+    <h3 class="userr">Name: </h3>
+    <textarea id="text_review" name="text_review" type="text" ></textarea><br>
+    <input  class="buttonForReview" type="submit" value="Add Review" onclick="writeReview(); return false";>
+    <div class="error-mess" id="error-block"></div>
+
     </form>
-    <?php }else{
+    <?php } else{
         echo "<p class='comment' style='color: green; text-align: center; margin-top: 10px; margin-left: -50px'>
             Для того, щоб написати коментарій, зареєструйтесь.
         </p>";
-    }?>
+     }?>
         </div>
     </div>
   </div> <!--container -->
