@@ -2,7 +2,6 @@
 @import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css");
 
 body {
-
     padding: 0;
     margin: 0;
 }
@@ -815,5 +814,28 @@ p{
         border-bottom-right-radius: 16px;
     }
 }
+
+
+/* Кнопка для скрола вгору  */
+
+#scrollTop{
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    font-size: 40px;
+    z-index: 50;
+    color: #216f29;
+    cursor: pointer;
+}
+
+.isShowBtn{
+    opacity: 1;
+    transition: .4s;
+}
+
+.isShowBtn_hide{
+    opacity: 0;
+}
+
 
 

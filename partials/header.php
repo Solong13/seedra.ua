@@ -9,6 +9,7 @@ $is_cookie = isset($_COOKIE['user_id']) && $_COOKIE['user_id'] != null;
     if($is_session || $is_cookie) {
 
         $userID = $is_session ? $is_session  : $is_cookie;
+
     // вибираємо де вибраний айді буде дорівнювати нашому айді через сесію. Тобто шукаємо по id
         $sql = "SELECT * FROM users WHERE id=" . $userID;
         $result = $db->prepare($sql);// виконання запросу
@@ -36,6 +37,7 @@ $is_cookie = isset($_COOKIE['user_id']) && $_COOKIE['user_id'] != null;
     <link rel="stylesheet" href="/assets/css/adptive.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/sass/cart.scss">
     <link rel="stylesheet" href="/assets/slick/slick.css">

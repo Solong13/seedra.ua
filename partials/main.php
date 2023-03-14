@@ -43,47 +43,47 @@
 
              <div class="our-prod">
                 <ul class="main-menu">
-                    <li><a href="#"><img src="/assets/img/liefs-chooce.png" alt="">ALL</a></li>
+                    <li><a href="/partials/sortCategories.php"><img src="/assets/img/liefs-chooce.png" >ALL</a></li>
                     <li><img src="/assets/img/bundles.png" alt=""><a href="#">BUNDLES</a>
                         <ul class="sub-menu">
-                            <li><a class="sub-menu-link" href="https://www.google.com.ua/">ALL BUNDLES</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=ALL BUNDLES">ALL BUNDLES</a></li>
                             <div class="v3"></div>
-                            <li><a class="sub-menu-link" href="">BUNDLES VEGETABLES</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=BUNDLES VEGETABLES">BUNDLES VEGETABLES</a></li>
                         </ul>
                     </li>
-                    <li><img src="/assets/img/heart.png" alt=""><a href="#">HERBS</a>
+                    <li><img src="/assets/img/heart.png" alt=""><a href="/partials/sortCategories.php?category=HERBS">HERBS</a>
                         <ul class="sub-menu">
-                            <li><a class="sub-menu-link" href="https://www.google.com.ua/">ALL HERBS</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=ALL HERBS">ALL HERBS</a></li>
                             <div class="v3"></div>
-                            <li><a class="sub-menu-link" href="">BUNDLES HERBS</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=BUNDLES HERBS">BUNDLES HERBS</a></li>
                         </ul>
                     </li>
-                    <li><img src="/assets/img/vegetabless.png" alt="#"><a class="veg" href="#">VEGETABLES</a>
+                    <li><img src="/assets/img/vegetabless.png" alt="#"><a class="veg" href="/partials/sortCategories.php?category=VEGETABLES">VEGETABLES</a>
                         <ul class="sub-menu">
-                            <li><a class="sub-menu-link" href="https://www.google.com.ua/">ALL VEGETABLES</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=ALL VEGETABLES">ALL VEGETABLES</a></li>
                             <div class="v3"></div>
-                            <li><a class="sub-menu-link" href="">CART VEGETABLES</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=CART VEGETABLES">CART VEGETABLES</a></li>
                         </ul>
                     </li>
-                    <li><img src="/assets/img/fruits.png" alt=""><a href="#">FRUITS</a>
+                    <li><img src="/assets/img/fruits.png" alt=""><a href="/partials/sortCategories.php?category=FRUITS">FRUITS</a>
                         <ul class="sub-menu">
-                            <li><a class="sub-menu-link" href="https://www.google.com.ua/">ALL FRUITS</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=ALL FRUITS">ALL FRUITS</a></li>
                             <div class="v3"></div>
-                            <li><a class="sub-menu-link" href="">CART FRUITS</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=CART FRUITS">CART FRUITS</a></li>
                         </ul>
                     </li>
-                    <li><img src="/assets/img/gardening tool.png" alt=""><a href="#">SUPPLIES</a>
+                    <li><img src="/assets/img/gardening tool.png" alt=""><a href="/partials/sortCategories.php?category=SUPPLIES">SUPPLIES</a>
                         <ul class="sub-menu">
-                            <li><a class="sub-menu-link" href="https://www.google.com.ua/">ALL SUPPLIES</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=ALL SUPPLIES">ALL SUPPLIES</a></li>
                             <div class="v3"></div>
-                            <li><a class="sub-menu-link" href="">BUNDLES SUPPLIES</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=BUNDLES SUPPLIES">BUNDLES SUPPLIES</a></li>
                         </ul>
                     </li>
-                    <li><img src="/assets/img/Flower (2).png" alt=""><a class="veg" href="#">FLOWERS</a>
+                    <li><img src="/assets/img/Flower (2).png" alt=""><a class="veg" href="/partials/sortCategories.php?category=FLOWERS">FLOWERS</a>
                         <ul class="sub-menu">
-                            <li><a class="sub-menu-link" href="https://www.google.com.ua/">ALL FLOWERS</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=ALL FLOWERS">ALL FLOWERS</a></li>
                             <div class="v3"></div>
-                            <li><a class="sub-menu-link" href="">BUNDLES FLOWERS</a></li>
+                            <li><a class="sub-menu-link" href="/partials/sortCategories.php?category=BUNDLES FLOWERS">BUNDLES FLOWERS</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -125,6 +125,7 @@
                         </div>
                         <img src="/assets/img/<?php echo $value['img']; ?>" alt="">
                         <div class="products-title"><a href="#"><?php echo $value['name']; ?></a></div>
+                        <div id="error_product" class="error_product<?= json_encode($value['id_product']); ?>"></div>
                         <div class="products-but-price">
                             <div class="price"><?php echo $value['price']; ?>$</div>
                             <div>
@@ -204,9 +205,15 @@
 
                     <?php
                         // Додавання коментарів , якщо користувач авторізувався
-                        if(isset($_SESSION['user_id'])){?>
+                        if(isset($_SESSION['user_id']) || isset($_COOKIE['user_id'])){?>
 
-                        <?php $nameUser = $_SESSION['user_id'];
+                        <?php
+                            $sessionUser = isset($_SESSION['user_id']);
+
+                            $cookieUser = isset($_COOKIE['user_id']);
+
+                            $nameUser = $sessionUser ?: $cookieUser;
+
                         $sql = "SELECT user FROM users WHERE id = $nameUser";
                         $res = $db->prepare($sql);
                         $res->execute();
@@ -231,3 +238,7 @@
   </div> <!--container -->
     </section>
 
+<!--scroll Top -->
+<div id="scrollTop" class="isShowBtn isShowBtn_hide">
+    <i class="fa-solid fa-arrow-up"></i>
+</div>

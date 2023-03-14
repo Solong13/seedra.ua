@@ -126,7 +126,8 @@ body {
 
 .cart-header {
   display: grid;
-  grid-template-columns: 2fr 3fr 3fr 3fr 1fr;
+  grid-template-columns: 2fr 3fr 3fr 3fr 4fr;
+  align-items: center;
   padding: 22px 0;
   background-color: #EAEFF2;
   font-weight: 700;
@@ -193,7 +194,7 @@ body {
 
 .product {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 3fr) 1fr;
+  grid-template-columns: 2fr repeat(4, 3fr) 1fr;
   column-gap: 30px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(126, 155, 189, 0.3);
@@ -285,3 +286,5 @@ body {
 }
 
 /*# sourceMappingURL=cart.css.map */
+
+

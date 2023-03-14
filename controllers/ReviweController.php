@@ -18,7 +18,11 @@ if(isset($_REQUEST['text_review'])){
     }else{
         session_start();
         // потрібно вставити в class="userr">
-        $nameUser = $_SESSION['user_id'];
+        $sessionUser = $_SESSION['user_id'];
+        $cookieUser = $_COOKIE['user_id'];
+
+        $nameUser = $sessionUser ?: $cookieUser;
+
         $sql = "SELECT user FROM users WHERE id = $nameUser";
         $res = $db->prepare($sql);
         $res->execute();

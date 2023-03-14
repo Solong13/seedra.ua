@@ -170,3 +170,14 @@
 .slick-dots li button:before {
     color: #257a2c;
 }
+
+#error_product{
+    margin-bottom: -30px;
+    color: darkred;
+}
+
+.btn_disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+

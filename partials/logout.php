@@ -3,6 +3,7 @@ session_start();
 
 if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] != null) {
     $_SESSION["user_id"] = NULL; //так стираємо нашу сесію присвоюючи їй нічого NULL
+    $_SESSION['cart'] = NULL;
     header("Location: /index.php");
 }
 
