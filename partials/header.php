@@ -105,7 +105,7 @@ $is_cookie = isset($_COOKIE['user_id']) && $_COOKIE['user_id'] != null;
                 </a>
                 
                  <div class="search-box">
-                    <form action="" method="GET" class="formForSearch">
+                    <form action="/partials/sortCategories.php" method="GET" class="formForSearch">
                         <button>
                             <a class="search-btn" href="#" name="search" value="search">
                                 <img src="/assets/img/search.png" alt="">

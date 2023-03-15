@@ -130,7 +130,7 @@
                             <div class="price"><?php echo $value['price']; ?>$</div>
                             <div>
                                 <button id="addToCart_<?php echo $value['id_product']; ?>"
-                                 class="buy" onclick="addToCart(<?= $value['id_product']; ?>); return false";>
+                                 class="buy" onclick="addToCart(<?= $value['id_product']; ?>); return false">
                                  Buy Now
                             </button>
                             </div>

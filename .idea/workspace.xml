@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7401bdbd-80bb-4bc3-a327-e2b4c3ecbb80" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/partials/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/partials/sitebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ReviweController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/ReviweModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Seedra.ua.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Seedra.ua.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/sortCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/sortCategories.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +29,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/xampp/htdocs/myshop.local",
-    "settings.editor.selected.configurable": "JavaScript.Libraries",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/techstore&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,6 +75,22 @@
       <workItem from="1677146273442" duration="11207000" />
       <workItem from="1677343958446" duration="10842000" />
       <workItem from="1677490912038" duration="13978000" />
+      <workItem from="1677690020982" duration="6572000" />
+      <workItem from="1677706137072" duration="372000" />
+      <workItem from="1677789041246" duration="3729000" />
+      <workItem from="1677834130633" duration="3701000" />
+      <workItem from="1678011853331" duration="15577000" />
+      <workItem from="1678131688998" duration="8975000" />
+      <workItem from="1678223148529" duration="2024000" />
+      <workItem from="1678296400184" duration="3933000" />
+      <workItem from="1678547378201" duration="1856000" />
+      <workItem from="1678549782251" duration="8928000" />
+      <workItem from="1678608552295" duration="1206000" />
+      <workItem from="1678624815036" duration="13511000" />
+      <workItem from="1678738052521" duration="2658000" />
+      <workItem from="1678813253991" duration="1424000" />
+      <workItem from="1678902779015" duration="1453000" />
+      <workItem from="1678911284351" duration="3527000" />
     </task>
     <servers />
   </component>
@@ -95,18 +107,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/assets/js/main.js</url>
-          <line>50</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
