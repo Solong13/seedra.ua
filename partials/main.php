@@ -10,10 +10,12 @@
                         <img   src="/assets/img/forSlider2.jpg" alt="">
                     </div>
 
-                    <div class="buttons">
+                    <!-- кнопки слайдера -->
+                    
+                    <!-- <div class="buttons">
                         <button class="prev">prev</button>
                         <button class="next">next</button>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="header-pic">
@@ -30,11 +32,13 @@
                         <li> <a href="/Seedra" class="forSort">Sort by price</a> 
                         <span class="menu_arrow arrow"></span>
                             <ul class="sub-menu1">
-                                <li>                          
-                                <a  class="sort" href="index.php?sort_by=most_expensive">Most expensive</a> 
+                                <li>                         
+                                    <a class="sort" href="/partials/sortCategories.php?sort_by=most_expensive">Most expensive</a> 
                                 </li>
                                 <div class="v3"></div>
-                                <li > <a class="sort" href="index.php?sort_by=most_chep">Most cheap</a> </li>
+                                <li > 
+                                    <a class="sort" href="/partials/sortCategories.php?sort_by=most_chep">Most cheap</a> 
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -97,31 +101,18 @@
             $result = $db->prepare($sql);
             $result->execute();
 
-            if(isset($_GET['sort_by'])){
-                if($_GET['sort_by'] == 'most_expensive'){
-                    $sql = "SELECT * FROM catalog 
-            JOIN products ON catalog.id_product = products.id
-            JOIN category ON catalog.id_category = category.id ORDER BY price DESC";
-
-                    $result = $db->prepare($sql);
-                    $result->execute();
-
-                }elseif($_GET['sort_by'] == 'most_chep'){
-                    $sql = "SELECT * FROM catalog 
-            JOIN products ON catalog.id_product = products.id
-            JOIN category ON catalog.id_category = category.id ORDER BY price ";
-                    $result = $db->prepare($sql);
-                    $result->execute();
-                }
-            }
             $row = $result->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($row as $key => $value):?>
 
                 <div class="products">
-                    <form action="">
-                        <div class="likePost">
-                            <a href="/partials/like.php?id=<?= $value['id_product']; ?>"> <img src="/assets/img/<?= $value['imageLike']; ?>" alt=""></a>
+  
+                        <div  class="likePost">
+                            <a href="/partials/like.php?id=<?= $value['id_product']; ?>"
+                            onclick="addToLike(<?= $value['id_product'] ?>); return false">
+                             <img id="likedd<?= $value['id_product']; ?>" src="/assets/img/<?= $value['imageLike']; ?>" 
+                             >
+                            </a>
                         </div>
                         <img src="/assets/img/<?php echo $value['img']; ?>" alt="">
                         <div class="products-title"><a href="#"><?php echo $value['name']; ?></a></div>
@@ -135,7 +126,7 @@
                             </button>
                             </div>
                         </div>
-                    </form>
+          
                 </div>
 
         <?php endforeach; ?>

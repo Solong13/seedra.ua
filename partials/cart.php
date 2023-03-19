@@ -83,7 +83,8 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                 if ($str){
                     $sql = "SELECT * FROM catalog 
                     JOIN products ON catalog.id_product = products.id
-                    JOIN category ON catalog.id_category = category.id WHERE products.id IN($str)";
+                    JOIN category ON catalog.id_category = category.id 
+                    WHERE products.id IN($str)";
 
                     $result = $db->prepare($sql);
                     $result->execute();

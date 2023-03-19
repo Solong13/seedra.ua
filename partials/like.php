@@ -15,18 +15,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 3) розбиваємо маси сепаратором в строку та  створюємо пошук по даному списку айді в табліці та виводимо
  */
 
-if (isset($_GET['id'])){
-
-    if(!isset($_SESSION['like'])){
-        $_SESSION['like'] = [];
-    }
-    $like =  htmlspecialchars(intval($_GET['id']));
-    var_dump($like);
-    if(isset($_SESSION['like']) && array_search($like, $_SESSION['like']) === false){
-        $_SESSION['like'][] = $like;
-
-    }header("Location:/");
-} ?>
+ ?>
 
     <section class="section-cart">
         <header class="section-cart__header">
@@ -44,13 +33,27 @@ if (isset($_GET['id'])){
                     <?php
                         $likes = $_SESSION['like'];
                         $countStrLikes = implode(',', $likes);
-
-                    $sql = "SELECT * FROM products WHERE id IN($countStrLikes)";
+                        //var_dump($countStrLikes);
+                    $sql = "SELECT id_product FROM likes
+                    JOIN users ON likes.id_user = users.id
+                    JOIN products ON likes.id_product = products.id";
 
                     $result = $db->prepare($sql);
                     $result->execute();
+                   $likes = $result->fetchAll();
 
-                   $likeResult = $result->fetchAll();
+                   $like = [];
+                        foreach($likes as $item){
+                            $like[] = $item['id_product'];
+                        }
+                        $liy = implode(',', $like);
+ 
+                    $sql = "SELECT * FROM catalog 
+                    JOIN products ON catalog.id_product = products.id
+                    WHERE products.id IN($liy)";
+                    $res = $db->prepare($sql);
+                    $res->execute();
+                    $likeResult = $res->fetchAll();
 
                    foreach ($likeResult as $key => $like):?>
                             <section class="product" id="product<?php echo $like['id'] ?>">

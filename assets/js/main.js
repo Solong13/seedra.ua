@@ -236,4 +236,50 @@ function totalConversionCount(){
             });
     }
 
+    function addToLike(id){
+  
+        const liked = $('#likedd' + id).attr("src");
+        console.log('1');
+        $.ajax({
+            url:'/controllers/LikeController.php',
+            type: 'POST',
+            cache: false,
+            data: {'id': id},
+            dataType: 'json',
+            success: function(data){
+                if(data['result']){
+                    console.log('add');
+                    $('#likedd' + id).attr("src", "/assets/img/liked.png");
+                }else if(data['del']){
+                    console.log('del');
+                    $('#likedd' + id).attr("src", '/assets/img/likePost.png');
+                }
+            },
+            error: function (jqXHR, exception) {
+                if (jqXHR.status === 0) {
+                    alert('Not connect. Verify Network.');
+                } else if (jqXHR.status == 404) {
+                    alert('Requested page not found (404).');
+                } else if (jqXHR.status == 500) {
+                    alert('Internal Server Error (500).');
+                } else if (exception === 'parsererror') {
+                    alert('Requested JSON parse failed.');
+                } else if (exception === 'timeout') {
+                    alert('Time out error.');
+                } else if (exception === 'abort') {
+                    alert('Ajax request aborted.');
+                } else {
+                    alert('Uncaught Error. ' + jqXHR.responseText);
+                }
+            }
 
+        })
+        // console.log('2');
+        // if(liked == '/assets/img/likePost.png'){
+
+        //     $('#likedd' + id).attr("src", "/assets/img/liked.png");
+        // }else{
+        //     $('#likedd' + id).attr("src", '/assets/img/likePost.png');
+        // }
+
+    }

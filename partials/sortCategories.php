@@ -9,20 +9,37 @@ if (isset($_GET['search'])) {
     $search_option = '';
 }
 
+// SORTING OPTION
+if(isset($_GET['sort_by'])){
+    if($_GET['sort_by'] == 'most_expensive'){
+        $sort_option = 'ORDER BY price DESC';
+    } else if($_GET['sort_by'] == 'most_chep'){
+        $sort_option = 'ORDER BY price ASC';
+    }
+}else{
+    $sort_option = '';  
+}
+
 // CATEGORY SEARCH
-$category = $_GET['category'] ?? null;
-var_dump($category);
+$category = $_GET['category'] ?? '';
+
 if(!empty($_GET['category'])){
     $sql = "SELECT * FROM catalog 
             JOIN products ON catalog.id_product = products.id
             JOIN category ON catalog.id_category = category.id 
-            WHERE category_name = '$category'";
+            WHERE category_name = '$category'
+            $sort_option";
+}else if(isset($_GET['sort_by'])){
+    $sql = "SELECT * FROM catalog 
+    JOIN products ON catalog.id_product = products.id
+    JOIN category ON catalog.id_category = category.id 
+    $sort_option";
 }else{
     $sql = "SELECT * FROM catalog 
-            JOIN products ON catalog.id_product = products.id
-            JOIN category ON catalog.id_category = category.id 
-            $search_option";
-}
+    JOIN products ON catalog.id_product = products.id
+    JOIN category ON catalog.id_category = category.id 
+    $search_option";
+}var_dump($sql);
 
 $res = $db->prepare($sql);
 
@@ -124,24 +141,6 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 
 
             $res->execute();
-
-            if(isset($_GET['sort_by'])){
-                if($_GET['sort_by'] == 'most_expensive'){
-                    $sql = "SELECT * FROM catalog 
-            JOIN products ON catalog.id_product = products.id
-            JOIN category ON catalog.id_category = category.id ORDER BY price DESC";
-
-                    $result = $db->prepare($sql);
-                    $result->execute();
-
-                }elseif($_GET['sort_by'] == 'most_chep'){
-                    $sql = "SELECT * FROM catalog 
-            JOIN products ON catalog.id_product = products.id
-            JOIN category ON catalog.id_category = category.id ORDER BY price ";
-                    $result = $db->prepare($sql);
-                    $result->execute();
-                }
-            }
             $row = $res->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($row as $key => $value):?>
