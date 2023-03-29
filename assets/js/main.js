@@ -239,7 +239,7 @@ function totalConversionCount(){
     function addToLike(id){
   
         const liked = $('#likedd' + id).attr("src");
-        console.log('1');
+
         $.ajax({
             url:'/controllers/LikeController.php',
             type: 'POST',
